@@ -16,10 +16,8 @@ public class Account {
             }
 
         if (!name.startsWith(" ") && !name.endsWith(" ") && name.length() >= 3 && name.length() <= 19 && count == 1) {
-            System.out.println("This name will be printed: " + name);
             return true;
         }
-        System.out.println("This name cannot be printed: " + name);
         return false;
     }
 }
