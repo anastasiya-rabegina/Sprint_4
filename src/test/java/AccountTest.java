@@ -20,10 +20,11 @@ public class AccountTest {
     @Parameterized.Parameters
     public static Object [][] getTestData() {
         return new Object [][] {
-                {"Correct Name", true},
+                {"Correct Nameeeeeeee", true},
+                {"C N", true},
                 {"IncorrectName", false},
-                {" Incorrect name", false},
-                {"Incorrect name ", false},
+                {" Incorrectname", false},
+                {"Incorrectname ", false},
                 {"Incorrect  Name", false},
                 {"Ie", false},
                 {"Incorrect Nameeeeeee", false},
