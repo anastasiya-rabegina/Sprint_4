@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,6 +31,8 @@ public class AccountTest {
     }
 
     @Test
+    @DisplayName("Check return value for different names")
+    @Description("Basic Test to check different requirement for name")
     public void  methodReturnsTrueForCorrectName() {
         Account account = new Account(checkedName);
         Assert.assertEquals(expected, account.checkNameToEmboss());
