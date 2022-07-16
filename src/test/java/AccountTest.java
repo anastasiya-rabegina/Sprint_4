@@ -17,7 +17,7 @@ public class AccountTest {
         this.expected = expected;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0} {1}")
     public static Object [][] getTestData() {
         return new Object [][] {
                 {"Correct Nameeeeeeee", true},
@@ -34,8 +34,8 @@ public class AccountTest {
     }
 
     @Test
-    @DisplayName("Check return value for different names")
-    @Description("Basic Test to check different requirement for name")
+//    @DisplayName("Check return value for different names")
+//    @Description("Basic Test to check different requirement for name")
     public void  methodReturnsTrueForCorrectName() throws Exception {
         Account account = new Account(checkedName);
         Assert.assertEquals(expected, account.checkNameToEmboss());
