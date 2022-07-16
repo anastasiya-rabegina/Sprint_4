@@ -28,13 +28,15 @@ public class AccountTest {
                 {"Incorrect  Name", false},
                 {"Ie", false},
                 {"Incorrect Nameeeeeee", false},
+                {"", false},
+                {null, false},
         };
     }
 
     @Test
     @DisplayName("Check return value for different names")
     @Description("Basic Test to check different requirement for name")
-    public void  methodReturnsTrueForCorrectName() {
+    public void  methodReturnsTrueForCorrectName() throws Exception {
         Account account = new Account(checkedName);
         Assert.assertEquals(expected, account.checkNameToEmboss());
     }
